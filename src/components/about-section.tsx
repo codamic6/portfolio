@@ -15,7 +15,7 @@ export function AboutSection() {
           <div className="animate-in fade-in slide-in-from-left-12 duration-1000">
             <div className="relative aspect-square max-w-md mx-auto">
               <Image
-                src="/luqman.png"
+                src="/me.jpg"
                 alt="A professional headshot of Luqman, a UI/UX Designer"
                 width={600}
                 height={600}

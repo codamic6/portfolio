@@ -42,7 +42,7 @@ export default function RootLayout({
         >
           <div className="flex flex-col min-h-dvh bg-background">
             <Header />
-            <main className="flex-1 w-full overflow-x-hidden pt-20">
+            <main className="flex-1 w-full overflow-x-hidden">
               {children}
             </main>
             <Footer />

@@ -2,21 +2,21 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./theme-toggle";
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 
 const navLinks = [
-  { href: "/about", label: "About" },
-  { href: "/portfolio", label: "Portfolio" },
-  { href: "/skills", label: "Skills" },
-  { href: "/testimonials", label: "Testimonials" },
-  { href: "/contact", label: "Contact" },
+  { href: "/#about", label: "About" },
+  { href: "/#portfolio", label: "Portfolio" },
+  { href: "/#skills", label: "Skills" },
+  { href: "/#testimonials", label: "Testimonials" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -27,22 +27,11 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   
-  useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
-    return () => {
-      document.body.style.overflow = 'auto';
-    };
-  }, [isMenuOpen]);
-
   return (
     <header
       className={cn(
         "fixed top-0 z-50 w-full transition-all duration-300",
-        isScrolled || isMenuOpen ? "bg-background/80 backdrop-blur-lg border-b" : "bg-transparent"
+        isScrolled ? "bg-background/80 backdrop-blur-lg border-b" : "bg-transparent"
       )}
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
@@ -64,28 +53,31 @@ export function Header() {
         </nav>
         <div className="flex items-center gap-2 md:hidden">
           <ThemeToggle />
-          <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            <span className="sr-only">Toggle menu</span>
-          </Button>
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon">
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Toggle menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[280px] bg-background/95 backdrop-blur-lg">
+              <nav className="flex flex-col items-center justify-center h-full gap-8">
+                {navLinks.map((link, index) => (
+                  <SheetClose asChild key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-2xl font-medium text-foreground/80 transition-colors hover:text-primary animate-in fade-in-0 slide-in-from-top-4"
+                       style={{ animationDelay: `${index * 100 + 200}ms`, animationFillMode: 'both' }}
+                    >
+                      {link.label}
+                    </Link>
+                  </SheetClose>
+                ))}
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
-      {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full h-[calc(100vh-5rem)] bg-background/95 backdrop-blur-lg">
-          <nav className="flex flex-col items-center justify-center h-full gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setIsMenuOpen(false)}
-                className="text-2xl font-medium text-foreground/80 transition-colors hover:text-primary animate-in fade-in slide-in-from-top-4 duration-500"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-        </div>
-      )}
     </header>
   );
 }

@@ -42,7 +42,7 @@ export function HeroSection() {
           </div>
           <div className="relative w-full max-w-[250px] sm:max-w-sm md:max-w-md mx-auto aspect-square animate-in fade-in slide-in-from-right-12 duration-1000">
              <Image
-                src="/me.jpg"
+                src="https://picsum.photos/600/600"
                 alt="Luqman smiling in a professional headshot"
                 fill
                 className="object-cover rounded-full shadow-2xl"

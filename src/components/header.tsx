@@ -41,7 +41,7 @@ export function Header() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full transition-all duration-300",
+        "fixed top-0 z-50 w-full transition-all duration-300",
         isScrolled || isMenuOpen ? "bg-background/80 backdrop-blur-lg border-b" : "bg-transparent"
       )}
     >

@@ -9,11 +9,11 @@ const highlights = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-20 md:py-32 bg-secondary/50">
+    <section id="about" className="py-20 md:py-32 bg-secondary/50 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-24 items-center">
           <div className="animate-in fade-in slide-in-from-left-12 duration-1000">
-            <div className="relative aspect-square max-w-md mx-auto">
+            <div className="relative aspect-square max-w-sm sm:max-w-md mx-auto">
               <Image
                 src="/me.jpg"
                 alt="A professional headshot of Luqman, a UI/UX Designer"

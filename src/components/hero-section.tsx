@@ -9,7 +9,7 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative w-full h-screen min-h-[700px] flex items-center justify-center overflow-hidden"
+      className="relative w-full h-screen min-h-[700px] flex items-center justify-center overflow-hidden pt-20"
     >
       <div className="absolute inset-0 animated-gradient -z-10"></div>
       <div className="absolute inset-0 bg-background/30 -z-10"></div>
@@ -17,7 +17,7 @@ export function HeroSection() {
       <div className="container px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="text-center md:text-left animate-in fade-in slide-in-from-left-12 duration-1000">
-            <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
+            <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
               Hi, I’m Luqman{" "}
               <span className="inline-block animate-wave">👋</span> — A Creative
               UI/UX Designer
@@ -40,7 +40,7 @@ export function HeroSection() {
               </Button>
             </div>
           </div>
-          <div className="relative w-full max-w-sm md:max-w-md mx-auto aspect-square animate-in fade-in slide-in-from-right-12 duration-1000">
+          <div className="relative w-full max-w-[250px] sm:max-w-sm md:max-w-md mx-auto aspect-square animate-in fade-in slide-in-from-right-12 duration-1000">
              <Image
                 src="/me.jpg"
                 alt="Luqman smiling in a professional headshot"

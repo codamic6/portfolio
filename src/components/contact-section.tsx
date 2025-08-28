@@ -31,14 +31,16 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-32">
+    <section id="contact" className="py-20 md:py-32 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-center font-headline text-3xl md:text-4xl font-bold mb-4">Get in Touch</h2>
-        <p className="text-center max-w-2xl mx-auto text-lg text-foreground/70 mb-12">
-          Have a project in mind or just want to say hi? Feel free to reach out.
-        </p>
+        <div className="text-center animate-in fade-in-0 slide-in-from-bottom-10 duration-500">
+          <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4">Get in Touch</h2>
+          <p className="max-w-2xl mx-auto text-lg text-foreground/70 mb-12">
+            Have a project in mind or just want to say hi? Feel free to reach out.
+          </p>
+        </div>
 
-        <Card className="max-w-4xl mx-auto shadow-lg overflow-hidden">
+        <Card className="max-w-4xl mx-auto shadow-lg overflow-hidden animate-in fade-in-0 zoom-in-95 delay-200 duration-500">
           <div className="grid md:grid-cols-2">
             <div className="p-8 md:p-12">
               <h3 className="font-headline text-2xl font-bold mb-6">Send a Message</h3>
@@ -55,7 +57,7 @@ export function ContactSection() {
                   <label htmlFor="message" className="sr-only">Message</label>
                   <Textarea id="message" placeholder="Your Message" required rows={5} className="text-base" />
                 </div>
-                <Button type="submit" size="lg" className="w-full font-semibold">Send Message</Button>
+                <Button type="submit" size="lg" className="w-full font-semibold transition-transform hover:scale-105">Send Message</Button>
               </form>
             </div>
             <div className="bg-secondary/50 p-8 md:p-12 flex flex-col justify-center">
@@ -73,12 +75,14 @@ export function ContactSection() {
               <div className="mt-8">
                 <h4 className="font-headline text-xl font-bold mb-4">Follow Me</h4>
                 <div className="flex gap-4">
-                  {socialLinks.map(social => (
-                    <Button asChild key={social.name} variant="outline" size="icon" className="h-12 w-12 rounded-full hover:bg-primary/10 hover:text-primary">
-                      <Link href={social.url} target="_blank" rel="noopener noreferrer" aria-label={social.name}>
-                        {social.icon}
-                      </Link>
-                    </Button>
+                  {socialLinks.map((social, index) => (
+                     <div key={social.name} className="animate-in fade-in-0 zoom-in-50" style={{ animationDelay: `${index * 100}ms`}}>
+                      <Button asChild variant="outline" size="icon" className="h-12 w-12 rounded-full hover:bg-primary/10 hover:text-primary transition-transform hover:scale-110">
+                        <Link href={social.url} target="_blank" rel="noopener noreferrer" aria-label={social.name}>
+                          {social.icon}
+                        </Link>
+                      </Button>
+                    </div>
                   ))}
                 </div>
               </div>

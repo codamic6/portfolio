@@ -15,14 +15,14 @@ export function AboutSection() {
           <div className="animate-in fade-in slide-in-from-left-12 duration-1000">
             <div className="relative aspect-square max-w-sm sm:max-w-md mx-auto">
               <Image
-                src="/luqman.jpg"
+                src="https://picsum.photos/600/600?q=1"
                 alt="A professional headshot of Luqman, a UI/UX Designer"
                 width={600}
                 height={600}
                 className="rounded-lg shadow-2xl object-cover"
                 data-ai-hint="professional headshot"
               />
-              <div className="absolute -bottom-4 -right-4 bg-background p-4 rounded-lg shadow-xl border">
+              <div className="absolute -bottom-4 -right-4 bg-background p-4 rounded-lg shadow-xl border animate-in fade-in zoom-in-50 delay-500 duration-500">
                  <p className="font-headline font-semibold text-lg text-primary">Muhammad Luqman</p>
                  <p className="text-sm text-foreground/70">UI/UX Designer</p>
               </div>
@@ -35,7 +35,7 @@ export function AboutSection() {
             </p>
             <div className="space-y-6">
               {highlights.map((item, index) => (
-                <div key={index} className="flex items-start gap-4">
+                <div key={index} className="flex items-start gap-4 animate-in fade-in-0 slide-in-from-bottom-5" style={{ animationDelay: `${index * 150 + 500}ms`, animationFillMode: 'backwards' }}>
                   <div className="bg-primary/10 p-3 rounded-full">{item.icon}</div>
                   <div>
                     <h3 className="font-headline text-xl font-semibold">{item.title}</h3>

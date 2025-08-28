@@ -27,14 +27,14 @@ export function HeroSection() {
               mind.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
-              <Button asChild size="lg" className="font-semibold px-8 py-6 text-lg">
+              <Button asChild size="lg" className="font-semibold px-8 py-6 text-lg transition-transform hover:scale-105">
                 <Link href="/portfolio">View Portfolio</Link>
               </Button>
               <Button
                 asChild
                 size="lg"
                 variant="outline"
-                className="font-semibold bg-background/50 px-8 py-6 text-lg"
+                className="font-semibold bg-background/50 px-8 py-6 text-lg transition-transform hover:scale-105"
               >
                 <Link href="/contact">Hire Me</Link>
               </Button>
@@ -43,7 +43,7 @@ export function HeroSection() {
           <div className="relative w-full max-w-sm md:max-w-md mx-auto aspect-square animate-in fade-in slide-in-from-right-12 duration-1000">
              <Image
                 src="https://picsum.photos/600/600"
-                alt="Luqman smiling in a professional headshot"
+                alt="A professional headshot of Luqman, a UI/UX Designer"
                 fill
                 className="object-cover rounded-full shadow-2xl"
                 data-ai-hint="professional headshot"

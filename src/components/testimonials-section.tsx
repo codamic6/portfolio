@@ -9,6 +9,8 @@ import {
 } from "@/components/ui/carousel";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Star } from "lucide-react";
+import Autoplay from "embla-carousel-autoplay";
+
 
 const testimonials = [
   {
@@ -65,22 +67,30 @@ export function TestimonialsSection() {
   return (
     <section id="testimonials" className="py-20 md:py-32">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-center font-headline text-3xl md:text-4xl font-bold mb-4">What My Clients Say</h2>
-        <p className="text-center max-w-2xl mx-auto text-lg text-foreground/70 mb-12">
-          I'm humbled by the positive feedback from clients I've had the pleasure to work with.
-        </p>
+        <div className="text-center animate-in fade-in-0 slide-in-from-bottom-10 duration-500">
+          <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4">What My Clients Say</h2>
+          <p className="max-w-2xl mx-auto text-lg text-foreground/70 mb-12">
+            I'm humbled by the positive feedback from clients I've had the pleasure to work with.
+          </p>
+        </div>
 
         <Carousel
           opts={{ align: "start", loop: true }}
+          plugins={[
+            Autoplay({
+              delay: 5000,
+              stopOnInteraction: true,
+            }),
+          ]}
           className="w-full max-w-5xl mx-auto"
         >
           <CarouselContent>
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <div className="p-1 h-full">
-                  <Card className="flex flex-col h-full shadow-lg">
+                  <Card className="flex flex-col h-full shadow-lg hover:shadow-primary/20 transition-shadow duration-300">
                     <CardContent className="flex flex-col flex-grow items-center justify-center p-6 text-center">
-                      <Avatar className="h-20 w-20 mb-4 border-2 border-primary">
+                      <Avatar className="h-20 w-20 mb-4 border-2 border-primary transition-transform hover:scale-110">
                         <AvatarImage src={testimonial.avatar} alt={testimonial.name} data-ai-hint={testimonial.avatarHint} />
                         <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
                       </Avatar>
@@ -94,8 +104,8 @@ export function TestimonialsSection() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden lg:flex" />
-          <CarouselNext className="hidden lg:flex" />
+          <CarouselPrevious className="hidden lg:flex transition-transform hover:scale-110" />
+          <CarouselNext className="hidden lg:flex transition-transform hover:scale-110" />
         </Carousel>
       </div>
     </section>

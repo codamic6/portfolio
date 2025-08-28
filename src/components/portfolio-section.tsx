@@ -10,6 +10,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogDescription,
+  DialogTrigger,
 } from "./ui/dialog";
 import { Badge } from "./ui/badge";
 import { ExternalLink, Eye } from "lucide-react";
@@ -99,18 +100,20 @@ export function PortfolioSection() {
     <section id="portfolio" className="py-20 md:py-32">
       <Dialog onOpenChange={(isOpen) => !isOpen && setSelectedProject(null)}>
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-center font-headline text-3xl md:text-4xl font-bold mb-4">My Portfolio</h2>
-          <p className="text-center max-w-2xl mx-auto text-lg text-foreground/70 mb-12">
-            Here are some of the projects I'm proud to have worked on.
-          </p>
+          <div className="text-center animate-in fade-in-0 slide-in-from-bottom-10 duration-500">
+            <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4">My Portfolio</h2>
+            <p className="max-w-2xl mx-auto text-lg text-foreground/70 mb-12">
+              Here are some of the projects I'm proud to have worked on.
+            </p>
+          </div>
           
-          <div className="flex justify-center flex-wrap gap-2 mb-12">
+          <div className="flex justify-center flex-wrap gap-2 mb-12 animate-in fade-in-0 slide-in-from-bottom-10 delay-100 duration-500">
             {categories.map(category => (
               <Button
                 key={category}
                 variant={activeCategory === category ? "default" : "outline"}
                 onClick={() => setActiveCategory(category)}
-                className="font-semibold rounded-full bg-background/30 backdrop-blur-sm"
+                className="font-semibold rounded-full bg-background/30 backdrop-blur-sm transition-transform hover:scale-105"
               >
                 {category}
               </Button>
@@ -119,38 +122,39 @@ export function PortfolioSection() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project, index) => (
-              <Card
-                key={index}
-                className="overflow-hidden group cursor-pointer shadow-lg hover:shadow-primary/20 transition-shadow duration-300"
-                onClick={() => setSelectedProject(project)}
-              >
-                <CardContent className="p-0">
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <Image
-                      src={project.imageUrl}
-                      alt={project.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      data-ai-hint={project.imageHint}
-                    />
-                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition-colors duration-300 flex items-center justify-center">
-                      <div className="p-4 rounded-full bg-background/80 text-foreground opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                        <Eye className="h-8 w-8" />
+              <DialogTrigger asChild key={index} onClick={() => setSelectedProject(project)}>
+                <Card
+                  className="overflow-hidden group cursor-pointer shadow-lg hover:shadow-primary/20 transition-shadow duration-300 animate-in fade-in-0 zoom-in-95"
+                  style={{ animationDelay: `${index * 100 + 200}ms`, animationFillMode: 'backwards' }}
+                >
+                  <CardContent className="p-0">
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <Image
+                        src={project.imageUrl}
+                        alt={project.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        data-ai-hint={project.imageHint}
+                      />
+                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition-colors duration-300 flex items-center justify-center">
+                        <div className="p-4 rounded-full bg-background/80 text-foreground opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                          <Eye className="h-8 w-8" />
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="p-6 bg-card">
-                    <h3 className="font-headline text-xl font-semibold mb-2">{project.title}</h3>
-                    <Badge variant="secondary">{project.category}</Badge>
-                  </div>
-                </CardContent>
-              </Card>
+                    <div className="p-6 bg-card">
+                      <h3 className="font-headline text-xl font-semibold mb-2">{project.title}</h3>
+                      <Badge variant="secondary">{project.category}</Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </DialogTrigger>
             ))}
           </div>
         </div>
 
         {selectedProject && (
-          <DialogContent className="max-w-3xl p-0">
+          <DialogContent className="max-w-3xl p-0 animate-in fade-in-0 zoom-in-95 duration-300">
             <div className="grid md:grid-cols-2">
               <div className="relative aspect-square md:aspect-auto">
                 <Image
@@ -177,7 +181,7 @@ export function PortfolioSection() {
                   </div>
                 </div>
                 {selectedProject.liveUrl && (
-                  <Button asChild className="mt-8 w-full font-semibold">
+                  <Button asChild className="mt-8 w-full font-semibold transition-transform hover:scale-105">
                     <Link href={selectedProject.liveUrl} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="mr-2 h-4 w-4" />
                       Visit Site

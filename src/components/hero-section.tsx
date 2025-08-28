@@ -9,11 +9,11 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative w-full h-screen min-h-[700px] flex items-center justify-center overflow-hidden pt-20"
+      className="relative w-full h-dvh min-h-[700px] flex items-center justify-center overflow-hidden pt-20"
     >
-      <div className="absolute inset-0 animated-gradient -z-10"></div>
+      <div className="absolute inset-0 animated-gradient -z-20"></div>
       <div className="absolute inset-0 bg-background/30 -z-10"></div>
-
+      
       <div className="container px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="text-center md:text-left animate-in fade-in slide-in-from-left-12 duration-1000">
@@ -40,9 +40,9 @@ export function HeroSection() {
               </Button>
             </div>
           </div>
-          <div className="relative w-full max-w-[250px] sm:max-w-sm md:max-w-md mx-auto aspect-square animate-in fade-in slide-in-from-right-12 duration-1000">
+          <div className="relative w-full max-w-sm md:max-w-md mx-auto aspect-square animate-in fade-in slide-in-from-right-12 duration-1000">
              <Image
-                src="https://picsum.photos/seed/man/600/600"
+                src="https://picsum.photos/600/600"
                 alt="Luqman smiling in a professional headshot"
                 fill
                 className="object-cover rounded-full shadow-2xl"
@@ -53,8 +53,8 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
-        <Link href="/about" aria-label="Scroll to about section">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-in fade-in delay-1000 duration-1000">
+        <Link href="/#about" aria-label="Scroll to about section">
           <ArrowDown className="h-8 w-8 text-foreground/50 animate-bounce" />
         </Link>
       </div>

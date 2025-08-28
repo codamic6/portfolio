@@ -28,7 +28,7 @@ export function HeroSection() {
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
               <Button asChild size="lg" className="font-semibold px-8 py-6 text-lg">
-                <Link href="#portfolio">View Portfolio</Link>
+                <Link href="/portfolio">View Portfolio</Link>
               </Button>
               <Button
                 asChild
@@ -36,7 +36,7 @@ export function HeroSection() {
                 variant="outline"
                 className="font-semibold bg-background/50 px-8 py-6 text-lg"
               >
-                <Link href="#contact">Hire Me</Link>
+                <Link href="/contact">Hire Me</Link>
               </Button>
             </div>
           </div>
@@ -54,7 +54,7 @@ export function HeroSection() {
       </div>
 
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
-        <Link href="#about" aria-label="Scroll to about section">
+        <Link href="/about" aria-label="Scroll to about section">
           <ArrowDown className="h-8 w-8 text-foreground/50 animate-bounce" />
         </Link>
       </div>

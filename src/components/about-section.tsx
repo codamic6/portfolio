@@ -5,12 +5,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Award, Briefcase, GraduationCap, CheckCircle, Users2 } from "lucide-react";
 
-const highlights = [
-  { icon: <Award className="h-8 w-8 text-primary" />, title: "2+ Years Experience", description: "Designing beautiful and functional digital products." },
-  { icon: <Briefcase className="h-8 w-8 text-primary" />, title: "AI & Design Specialist", description: "Blending design creativity with advanced AI knowledge." },
-  { icon: <Users2 className="h-8 w-8 text-primary" />, title: "Global Collaboration", description: "Successfully working with clients from around the globe." },
-];
-
 const education = [
     { icon: <GraduationCap className="h-8 w-8 text-primary" />, degree: "M.Sc. Information Technology", school: "University of Education, Lahore", year: "2023" },
     { icon: <GraduationCap className="h-8 w-8 text-primary" />, degree: "B.Sc. Artificial Intelligence", school: "Punjab University", year: "2024" },
@@ -76,36 +70,38 @@ export function AboutSection() {
             </div>
           </motion.div>
           <motion.div className="space-y-8" variants={itemVariants}>
-            <h2 className="font-headline text-3xl md:text-4xl font-bold">Creative UI/UX & AI Specialist</h2>
+            <h2 className="font-headline text-3xl md:text-4xl font-bold">I’m Muhammad Luqman — UI/UX Designer, AI Specialist, and Web Developer</h2>
             <p className="text-lg text-foreground/80">
-             I’m Muhammad Luqman, a professional UI/UX Designer & AI Specialist with 2+ years of experience. I design web apps, mobile apps, dashboards, and landing pages that blend beauty with usability. With a B.Sc. in Artificial Intelligence and M.Sc. in Information Technology, plus certifications from Udemy (AI Development) and Coursera (IT), I bring a strong mix of design creativity and advanced AI knowledge. My goal is to craft modern, user-friendly, and smart digital experiences that help businesses stand out. I always go the extra mile to ensure projects succeed and clients are satisfied.
+            Muhammad Luqman is a Gen-Z creative technologist blending design, AI, and web development. He builds futuristic interfaces, smart AI systems, and responsive apps.
             </p>
-            
-             <motion.div className="space-y-6 pt-8" variants={containerVariants}>
-                 <h3 className="font-headline text-2xl font-bold">Education</h3>
-                 {education.map((item, index) => (
-                    <motion.div key={index} className="flex items-start gap-4" variants={itemVariants}>
-                        <div className="bg-primary/10 p-3 rounded-full">{item.icon}</div>
-                        <div>
-                            <h4 className="font-headline text-xl font-semibold">{item.degree}</h4>
-                            <p className="text-foreground/70">{item.school} - Graduated {item.year}</p>
-                        </div>
-                    </motion.div>
-                 ))}
-             </motion.div>
-             <motion.div className="space-y-6 pt-8" variants={containerVariants}>
-                 <h3 className="font-headline text-2xl font-bold">Certifications</h3>
-                 {certifications.map((item, index) => (
-                    <motion.div key={index} className="flex items-start gap-4" variants={itemVariants}>
-                        <div className="bg-primary/10 p-3 rounded-full">{item.icon}</div>
-                        <div>
-                            <h4 className="font-headline text-xl font-semibold">{item.name}</h4>
-                            <p className="text-foreground/70">{item.provider} - {item.year}</p>
-                        </div>
-                    </motion.div>
-                 ))}
-             </motion.div>
           </motion.div>
+        </div>
+
+        <div className="mt-16 md:mt-24 grid md:grid-cols-2 gap-12 lg:gap-24">
+           <motion.div className="space-y-6" variants={containerVariants}>
+               <h3 className="font-headline text-2xl font-bold">Education</h3>
+               {education.map((item, index) => (
+                  <motion.div key={index} className="flex items-start gap-4" variants={itemVariants}>
+                      <div className="bg-primary/10 p-3 rounded-full">{item.icon}</div>
+                      <div>
+                          <h4 className="font-headline text-xl font-semibold">{item.degree}</h4>
+                          <p className="text-foreground/70">{item.school} - Graduated {item.year}</p>
+                      </div>
+                  </motion.div>
+               ))}
+           </motion.div>
+           <motion.div className="space-y-6" variants={containerVariants}>
+               <h3 className="font-headline text-2xl font-bold">Certifications</h3>
+               {certifications.map((item, index) => (
+                  <motion.div key={index} className="flex items-start gap-4" variants={itemVariants}>
+                      <div className="bg-primary/10 p-3 rounded-full">{item.icon}</div>
+                      <div>
+                          <h4 className="font-headline text-xl font-semibold">{item.name}</h4>
+                          <p className="text-foreground/70">{item.provider} - {item.year}</p>
+                      </div>
+                  </motion.div>
+               ))}
+           </motion.div>
         </div>
       </div>
     </motion.section>

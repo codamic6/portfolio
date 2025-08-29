@@ -6,13 +6,13 @@ import { Card, CardContent } from "./ui/card";
 import { BrainCircuit, Code, Database, Palette, Bot } from "lucide-react";
 
 const skills = [
-  { name: "HTML", level: 95, icon: <Code className="h-8 w-8" /> },
-  { name: "CSS & Tailwind", level: 90, icon: <Palette className="h-8 w-8" /> },
-  { name: "JavaScript", level: 85, icon: <Code className="h-8 w-8" /> },
+  { name: "Website Development", level: 99, icon: <Code className="h-8 w-8" /> },
+  { name: "Data Cleaning", level: 91, icon: <Database className="h-8 w-8" /> },
+  { name: "Artificial Intelligence", level: 93, icon: <BrainCircuit className="h-8 w-8" /> },
+  { name: "Machine Learning", level: 96, icon: <Bot className="h-8 w-8" /> },
+  { name: "Adobe", level: 100, icon: <Palette className="h-8 w-8" /> },
   { name: "Python", level: 88, icon: <Code className="h-8 w-8" /> },
   { name: "React & Next.js", level: 80, icon: <Code className="h-8 w-8" /> },
-  { name: "Firebase", level: 75, icon: <Database className="h-8 w-8" /> },
-  { name: "AI Tools", level: 90, icon: <Bot className="h-8 w-8" /> },
   { name: "UI/UX Design", level: 92, icon: <BrainCircuit className="h-8 w-8" /> },
 ];
 

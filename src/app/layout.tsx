@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { MotionProvider } from "@/components/motion-provider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -40,17 +41,19 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="animated-border-wrapper">
-            <div className="animated-border"></div>
-            <div className="relative z-10 flex flex-col min-h-dvh bg-background">
-              <Header />
-              <main className="flex-1 w-full overflow-x-hidden">
-                {children}
-              </main>
-              <Footer />
+          <MotionProvider>
+            <div className="animated-border-wrapper">
+              <div className="animated-border"></div>
+              <div className="relative z-10 flex flex-col min-h-dvh bg-background">
+                <Header />
+                <main className="flex-1 w-full overflow-x-hidden">
+                  {children}
+                </main>
+                <Footer />
+              </div>
             </div>
-          </div>
-          <Toaster />
+            <Toaster />
+          </MotionProvider>
         </ThemeProvider>
       </body>
     </html>

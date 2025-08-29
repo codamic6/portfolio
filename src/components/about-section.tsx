@@ -1,9 +1,8 @@
-
 "use client";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Award, Briefcase, GraduationCap, CheckCircle, Users2 } from "lucide-react";
+import { GraduationCap, CheckCircle } from "lucide-react";
 
 const education = [
     { icon: <GraduationCap className="h-8 w-8 text-primary" />, degree: "M.Sc. Information Technology", school: "University of Education, Lahore", year: "2023" },
@@ -72,7 +71,7 @@ export function AboutSection() {
           <motion.div className="space-y-8" variants={itemVariants}>
             <h2 className="font-headline text-3xl md:text-4xl font-bold">I’m Muhammad Luqman — UI/UX Designer, AI Specialist, and Web Developer</h2>
             <p className="text-lg text-foreground/80">
-            Muhammad Luqman is a Gen-Z creative technologist blending design, AI, and web development. He builds futuristic interfaces, smart AI systems, and responsive apps.
+            As a creative technologist, I blend design, AI, and web development to build futuristic interfaces, smart AI systems, and responsive apps.
             </p>
           </motion.div>
         </div>

@@ -107,7 +107,7 @@ export function HeroSection() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="relative w-96 h-96">
+            <div className="relative w-[30rem] h-[30rem]">
                 <div className="absolute -inset-8 rounded-full bg-primary/20 blur-3xl animate-pulse-slow"></div>
                 <svg className="absolute inset-0 w-full h-full text-primary/30 animate-spin-slow" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M50,0 A50,50 0 0,1 100,50" stroke="url(#g1)" strokeWidth="2"/>
@@ -138,9 +138,9 @@ export function HeroSection() {
                         priority
                     />
                 </motion.div>
-                <FloatingIcon icon={<PenTool className="w-12 h-12 text-primary/70" />} className="absolute top-0 left-1/4" delay={0} />
-                <FloatingIcon icon={<Code className="w-12 h-12 text-primary/70" />} className="absolute bottom-10 right-0" delay={0.2} />
-                <FloatingIcon icon={<BrainCircuit className="w-12 h-12 text-primary/70" />} className="absolute top-1/2 -left-4" delay={0.4} />
+                <FloatingIcon icon={<PenTool className="w-14 h-14 text-primary/70" />} className="absolute top-4 left-24" delay={0} />
+                <FloatingIcon icon={<Code className="w-14 h-14 text-primary/70" />} className="absolute bottom-12 -right-8" delay={0.2} />
+                <FloatingIcon icon={<BrainCircuit className="w-14 h-14 text-primary/70" />} className="absolute top-1/2 -left-12" delay={0.4} />
             </div>
           </motion.div>
         </div>

@@ -42,7 +42,7 @@ export function HeroSection() {
           </div>
           <div className="relative w-full max-w-sm md:max-w-md mx-auto aspect-square animate-in fade-in slide-in-from-right-12 duration-1000">
              <Image
-                src="https://picsum.photos/600/600"
+                src="https://picsum.photos/600/600?q=4"
                 alt="A professional headshot of Luqman, a UI/UX Designer"
                 fill
                 className="object-cover rounded-full shadow-2xl"

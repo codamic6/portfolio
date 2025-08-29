@@ -47,8 +47,8 @@ const iconHoverVariants = {
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="relative py-20 md:py-32 bg-secondary/50 overflow-hidden">
-        <div className="absolute inset-0 animated-gradient opacity-20 -z-10"></div>
+    <section id="skills" className="relative py-20 md:py-32 overflow-hidden">
+      <div className="absolute inset-0 bg-grid-slate-900/[0.04] bg-[bottom_1px_center] dark:bg-grid-slate-400/[0.05] dark:bg-bottom dark:border-b dark:border-slate-100/5 -z-10"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
             className="text-center mb-12 md:mb-16"
@@ -57,8 +57,10 @@ export function SkillsSection() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h2 className="font-headline text-3xl md:text-4xl font-bold">
-            My Professional Skills
+           <h2 className="font-headline text-3xl md:text-4xl font-bold">
+            <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              My Professional Skills
+            </span>
           </h2>
           <p className="max-w-2xl mx-auto text-lg text-foreground/70 mt-4">
             A showcase of the tools and technologies I use to bring ideas to life.
@@ -74,10 +76,10 @@ export function SkillsSection() {
         >
           {skills.map((skill) => (
             <motion.div key={skill.name} variants={itemVariants}>
-              <Card className="group flex flex-col items-center justify-center p-6 text-center h-full bg-card/50 backdrop-blur-sm rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-primary/30 hover:shadow-2xl">
+              <Card className="group flex flex-col items-center justify-center p-6 text-center h-full bg-card/50 backdrop-blur-sm rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-primary/30 hover:shadow-2xl hover:border-primary/30 border-transparent border">
                 <CardContent className="p-0 flex flex-col items-center justify-center flex-grow">
                   <motion.div 
-                    className="text-foreground mb-4 transition-transform duration-300"
+                    className="text-foreground mb-4 transition-colors duration-300 group-hover:text-primary"
                     variants={iconHoverVariants}
                     whileHover="hover"
                   >

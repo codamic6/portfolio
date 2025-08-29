@@ -1,10 +1,14 @@
+
+"use client";
+
 import Image from "next/image";
-import { Award, Briefcase, Users, GraduationCap, CheckCircle } from "lucide-react";
+import { motion } from "framer-motion";
+import { Award, Briefcase, GraduationCap, CheckCircle, Users2 } from "lucide-react";
 
 const highlights = [
   { icon: <Award className="h-8 w-8 text-primary" />, title: "2+ Years Experience", description: "Designing beautiful and functional digital products." },
   { icon: <Briefcase className="h-8 w-8 text-primary" />, title: "AI & Design Specialist", description: "Blending design creativity with advanced AI knowledge." },
-  { icon: <Users className="h-8 w-8 text-primary" />, title: "Global Collaboration", description: "Successfully working with clients from around the globe." },
+  { icon: <Users2 className="h-8 w-8 text-primary" />, title: "Global Collaboration", description: "Successfully working with clients from around the globe." },
 ];
 
 const education = [
@@ -18,11 +22,39 @@ const certifications = [
 ]
 
 export function AboutSection() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
   return (
-    <section id="about" className="py-20 md:py-32 bg-secondary/50 overflow-hidden">
+    <motion.section 
+      id="about" 
+      className="py-20 md:py-32 bg-secondary/50 overflow-hidden"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={containerVariants}
+    >
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-24 items-start">
-          <div className="animate-in fade-in slide-in-from-left-12 duration-1000">
+          <motion.div variants={itemVariants}>
             <div className="relative aspect-square max-w-sm sm:max-w-md mx-auto">
               <Image
                 src="https://picsum.photos/600/600?q=1"
@@ -32,55 +64,50 @@ export function AboutSection() {
                 className="rounded-lg shadow-2xl object-cover"
                 data-ai-hint="professional headshot"
               />
-              <div className="absolute -bottom-4 -right-4 bg-background p-4 rounded-lg shadow-xl border animate-in fade-in zoom-in-50 delay-500 duration-500">
+              <motion.div 
+                className="absolute -bottom-4 -right-4 bg-background p-4 rounded-lg shadow-xl border"
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+              >
                  <p className="font-headline font-semibold text-lg text-primary">Muhammad Luqman</p>
                  <p className="text-sm text-foreground/70">UI/UX Designer & AI Specialist</p>
-              </div>
+              </motion.div>
             </div>
-          </div>
-          <div className="space-y-8 animate-in fade-in slide-in-from-right-12 duration-1000">
+          </motion.div>
+          <motion.div className="space-y-8" variants={itemVariants}>
             <h2 className="font-headline text-3xl md:text-4xl font-bold">Creative UI/UX & AI Specialist</h2>
             <p className="text-lg text-foreground/80">
              I’m Muhammad Luqman, a professional UI/UX Designer & AI Specialist with 2+ years of experience. I design web apps, mobile apps, dashboards, and landing pages that blend beauty with usability. With a B.Sc. in Artificial Intelligence and M.Sc. in Information Technology, plus certifications from Udemy (AI Development) and Coursera (IT), I bring a strong mix of design creativity and advanced AI knowledge. My goal is to craft modern, user-friendly, and smart digital experiences that help businesses stand out. I always go the extra mile to ensure projects succeed and clients are satisfied.
             </p>
-            <div className="space-y-6">
-              {highlights.map((item, index) => (
-                <div key={index} className="flex items-start gap-4 animate-in fade-in-0 slide-in-from-bottom-5" style={{ animationDelay: `${index * 150 + 500}ms`, animationFillMode: 'backwards' }}>
-                  <div className="bg-primary/10 p-3 rounded-full">{item.icon}</div>
-                  <div>
-                    <h3 className="font-headline text-xl font-semibold">{item.title}</h3>
-                    <p className="text-foreground/70">{item.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-             <div className="space-y-6 pt-8">
+            
+             <motion.div className="space-y-6 pt-8" variants={containerVariants}>
                  <h3 className="font-headline text-2xl font-bold">Education</h3>
                  {education.map((item, index) => (
-                    <div key={index} className="flex items-start gap-4 animate-in fade-in-0 slide-in-from-bottom-5" style={{ animationDelay: `${index * 150 + 800}ms`, animationFillMode: 'backwards' }}>
+                    <motion.div key={index} className="flex items-start gap-4" variants={itemVariants}>
                         <div className="bg-primary/10 p-3 rounded-full">{item.icon}</div>
                         <div>
                             <h4 className="font-headline text-xl font-semibold">{item.degree}</h4>
                             <p className="text-foreground/70">{item.school} - Graduated {item.year}</p>
                         </div>
-                    </div>
+                    </motion.div>
                  ))}
-             </div>
-             <div className="space-y-6 pt-8">
+             </motion.div>
+             <motion.div className="space-y-6 pt-8" variants={containerVariants}>
                  <h3 className="font-headline text-2xl font-bold">Certifications</h3>
                  {certifications.map((item, index) => (
-                    <div key={index} className="flex items-start gap-4 animate-in fade-in-0 slide-in-from-bottom-5" style={{ animationDelay: `${index * 150 + 1100}ms`, animationFillMode: 'backwards' }}>
+                    <motion.div key={index} className="flex items-start gap-4" variants={itemVariants}>
                         <div className="bg-primary/10 p-3 rounded-full">{item.icon}</div>
                         <div>
                             <h4 className="font-headline text-xl font-semibold">{item.name}</h4>
                             <p className="text-foreground/70">{item.provider} - {item.year}</p>
                         </div>
-                    </div>
+                    </motion.div>
                  ))}
-             </div>
-          </div>
+             </motion.div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

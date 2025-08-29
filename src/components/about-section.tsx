@@ -66,7 +66,7 @@ export function AboutSection() {
                 transition={{ type: "spring", stiffness: 300, damping: 15 }}
               >
                 <Image
-                  src="https://picsum.photos/600/600?q=1"
+                  src="/mas.jpg"
                   alt="A professional headshot of Luqman, a UI/UX Designer"
                   width={600}
                   height={600}

@@ -1,6 +1,10 @@
+
+"use client";
+
 import { Card, CardContent } from "./ui/card";
 import { BrainCircuit } from "lucide-react";
 import { FigmaIcon, AdobeXDIcon, AdobePhotoshopIcon, AdobeIllustratorIcon, WebflowIcon } from "./icons";
+import { motion } from "framer-motion";
 
 const skills = [
   { name: "Figma", icon: <FigmaIcon className="h-10 w-10" /> },
@@ -11,23 +15,80 @@ const skills = [
   { name: "UI/UX Principles", icon: <BrainCircuit className="h-10 w-10 text-primary" /> },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
+
+const iconHoverVariants = {
+  hover: {
+    scale: 1.1,
+    rotate: [0, 10, -10, 0],
+    transition: { duration: 0.4, ease: "easeInOut" }
+  }
+};
+
 export function SkillsSection() {
   return (
-    <section id="skills" className="py-20 md:py-32 bg-secondary/50">
-      <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-center font-headline text-3xl md:text-4xl font-bold mb-12 animate-in fade-in-0 slide-in-from-bottom-10 duration-500">My Skills</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 max-w-5xl mx-auto">
-          {skills.map((skill, index) => (
-            <div key={index} className="animate-in fade-in zoom-in-95 duration-500" style={{ animationDelay: `${index * 100}ms`, animationFillMode: 'backwards' }}>
-              <Card className="flex flex-col items-center justify-center p-6 text-center h-full shadow-lg hover:shadow-primary/20 hover:-translate-y-2 transition-all duration-300">
+    <section id="skills" className="relative py-20 md:py-32 bg-secondary/50 overflow-hidden">
+        <div className="absolute inset-0 animated-gradient opacity-20 -z-10"></div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div 
+            className="text-center mb-12 md:mb-16"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <h2 className="font-headline text-3xl md:text-4xl font-bold">
+            My Professional Skills
+          </h2>
+          <p className="max-w-2xl mx-auto text-lg text-foreground/70 mt-4">
+            A showcase of the tools and technologies I use to bring ideas to life.
+          </p>
+        </motion.div>
+        
+        <motion.div 
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 md:gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
+          {skills.map((skill) => (
+            <motion.div key={skill.name} variants={itemVariants}>
+              <Card className="group flex flex-col items-center justify-center p-6 text-center h-full bg-card/50 backdrop-blur-sm rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-primary/30 hover:shadow-2xl">
                 <CardContent className="p-0 flex flex-col items-center justify-center flex-grow">
-                  <div className="text-foreground mb-4 transition-transform group-hover:scale-110">{skill.icon}</div>
+                  <motion.div 
+                    className="text-foreground mb-4 transition-transform duration-300"
+                    variants={iconHoverVariants}
+                    whileHover="hover"
+                  >
+                    {skill.icon}
+                  </motion.div>
                   <p className="font-semibold font-headline text-lg leading-tight">{skill.name}</p>
                 </CardContent>
               </Card>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

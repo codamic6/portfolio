@@ -61,7 +61,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              Shaping The Future of <br />
+              Shaping The Future of &nbsp;
               <motion.span 
                 key={dynamicText}
                 className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-500 to-pink-500"
@@ -129,7 +129,7 @@ export function HeroSection() {
                     transition={{ duration: 0.3 }}
                 >
                     <Image
-                        src="https://picsum.photos/600/600"
+                        src="/luqman.jpg"
                         alt="A professional headshot of Luqman, a UI/UX Designer"
                         width={600}
                         height={600}

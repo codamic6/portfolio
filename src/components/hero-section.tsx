@@ -137,16 +137,16 @@ export function HeroSection() {
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/30 to-accent/30 animate-pulse"></div>
               <div className="absolute inset-2 rounded-full bg-background/50 backdrop-blur-lg"></div>
               <svg className="absolute inset-0 w-full h-full text-primary/30 animate-spin-slow" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M50,0 A50,50 0 0,1 100,50" stroke="url(#g1)" stroke-width="2"/>
-                <path d="M50,100 A50,50 0 0,1 0,50" stroke="url(#g2)" stroke-width="2"/>
+                <path d="M50,0 A50,50 0 0,1 100,50" stroke="url(#g1)" strokeWidth="2"/>
+                <path d="M50,100 A50,50 0 0,1 0,50" stroke="url(#g2)" strokeWidth="2"/>
                  <defs>
                   <linearGradient id="g1" gradientTransform="rotate(90)">
-                    <stop offset="0%" stop-color="var(--color-primary)" />
-                    <stop offset="100%" stop-color="transparent" />
+                    <stop offset="0%" stopColor="var(--color-primary)" />
+                    <stop offset="100%" stopColor="transparent" />
                   </linearGradient>
                   <linearGradient id="g2" gradientTransform="rotate(90)">
-                    <stop offset="0%" stop-color="var(--color-accent)" />
-                    <stop offset="100%" stop-color="transparent" />
+                    <stop offset="0%" stopColor="var(--color-accent)" />
+                    <stop offset="100%" stopColor="transparent" />
                   </linearGradient>
                 </defs>
               </svg>

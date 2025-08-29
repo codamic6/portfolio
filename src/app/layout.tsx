@@ -40,12 +40,15 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex flex-col min-h-dvh bg-background">
-            <Header />
-            <main className="flex-1 w-full overflow-x-hidden">
-              {children}
-            </main>
-            <Footer />
+          <div className="animated-border-wrapper">
+            <div className="animated-border"></div>
+            <div className="relative z-10 flex flex-col min-h-dvh bg-background">
+              <Header />
+              <main className="flex-1 w-full overflow-x-hidden">
+                {children}
+              </main>
+              <Footer />
+            </div>
           </div>
           <Toaster />
         </ThemeProvider>

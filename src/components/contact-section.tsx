@@ -65,11 +65,11 @@ export function ContactSection() {
               <div className="space-y-4 text-lg">
                 <p>
                   <strong>Email:</strong>
-                  <a href="mailto:hello@luqman.design" className="ml-2 hover:text-primary transition-colors">hello@luqman.design</a>
+                  <a href="mailto:nazeerluqman92@gmail.com" className="ml-2 hover:text-primary transition-colors">nazeerluqman92@gmail.com</a>
                 </p>
                 <p>
                   <strong>Location:</strong>
-                  <span className="ml-2">Planet Earth</span>
+                  <span className="ml-2">Faisalabad, Pakistan</span>
                 </p>
               </div>
               <div className="mt-8">

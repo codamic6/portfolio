@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -6,7 +7,7 @@ import { Menu } from "lucide-react";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./theme-toggle";
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle } from "@/components/ui/sheet";
 
 const navLinks = [
   { href: "/#about", label: "About" },
@@ -61,6 +62,7 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[280px] bg-background/95 backdrop-blur-lg">
+              <SheetTitle className="sr-only">Menu</SheetTitle>
               <nav className="flex flex-col items-center justify-center h-full gap-8">
                 {navLinks.map((link, index) => (
                   <SheetClose asChild key={link.href}>

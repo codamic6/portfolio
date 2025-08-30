@@ -3,14 +3,15 @@
 
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
-import { Dribbble, Mail, MapPin } from "lucide-react";
+import { Facebook, Instagram, Mail, MapPin } from "lucide-react";
 import Link from "next/link";
-import { BehanceIcon, FiverrIcon, LinkedinIcon } from "./icons";
+import { FiverrIcon, LinkedinIcon, TiktokIcon } from "./icons";
 
 const socialLinks = [
+  { name: "Instagram", icon: <Instagram className="h-7 w-7" />, url: "#" },
+  { name: "TikTok", icon: <TiktokIcon className="h-7 w-7" />, url: "#" },
+  { name: "Facebook", icon: <Facebook className="h-7 w-7" />, url: "#" },
   { name: "Fiverr", icon: <FiverrIcon className="h-7 w-7" />, url: "#" },
-  { name: "Behance", icon: <BehanceIcon className="h-7 w-7" />, url: "#" },
-  { name: "Dribbble", icon: <Dribbble className="h-7 w-7" />, url: "#" },
   { name: "LinkedIn", icon: <LinkedinIcon className="h-7 w-7" />, url: "#" },
 ];
 
@@ -43,7 +44,7 @@ export function ContactSection() {
             <div className="border-t border-border/50 my-8"></div>
 
             <h4 className="font-headline text-xl font-bold mb-6">Follow Me</h4>
-            <div className="flex justify-center gap-4 md:gap-6">
+            <div className="flex justify-center flex-wrap gap-4 md:gap-6">
               {socialLinks.map((social, index) => (
                  <div key={social.name} className="animate-in fade-in-0 zoom-in-50" style={{ animationDelay: `${index * 100 + 300}ms`}}>
                   <Button asChild variant="outline" size="icon" className="h-16 w-16 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-primary/30 hover:shadow-lg hover:bg-primary/10 hover:text-primary">

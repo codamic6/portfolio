@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -138,9 +139,9 @@ export function HeroSection() {
                         priority
                     />
                 </motion.div>
-                <FloatingIcon icon={<PenTool className="w-14 h-14 text-primary/70" />} className="absolute top-4 left-24" delay={0} />
-                <FloatingIcon icon={<Code className="w-14 h-14 text-primary/70" />} className="absolute bottom-12 -right-8" delay={0.2} />
-                <FloatingIcon icon={<BrainCircuit className="w-14 h-14 text-primary/70" />} className="absolute top-1/2 -left-12" delay={0.4} />
+                <FloatingIcon icon={<PenTool className="w-14 h-14 text-primary/70" />} className="absolute top-0 left-20" delay={0} />
+                <FloatingIcon icon={<Code className="w-14 h-14 text-primary/70" />} className="absolute bottom-8 -right-12" delay={0.2} />
+                <FloatingIcon icon={<BrainCircuit className="w-14 h-14 text-primary/70" />} className="absolute top-1/2 -left-16" delay={0.4} />
             </div>
           </motion.div>
         </div>

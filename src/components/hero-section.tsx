@@ -36,7 +36,7 @@ const FloatingIcon = ({ icon, className, delay = 0 }: { icon: React.ReactNode, c
 
 export function HeroSection() {
   const [dynamicText, setDynamicText] = useState("Design");
-  const words = ["Design", "AI", "Future"];
+  const words = ["AI", "UI/UX", "Graphic"];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -62,7 +62,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              Shaping The Future of &nbsp;
+              Your Gateway of <br/>
               <motion.span 
                 key={dynamicText}
                 className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-500 to-pink-500"

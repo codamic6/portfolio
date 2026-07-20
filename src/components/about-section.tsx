@@ -10,8 +10,8 @@ const education = [
     ];
 
 const certifications = [
-    { icon: <CheckCircle className="h-8 w-8 text-primary" />, name: "AI Developer", provider: "Udemy", year: "2023" },
-    { icon: <CheckCircle className="h-8 w-8 text-primary" />, name: "IT Certification", provider: "Coursera", year: "2020" },
+    { icon: <CheckCircle className="h-8 w-8 text-primary" />, name: "Figma", provider: "Udemy", year: "2023" },
+    { icon: <CheckCircle className="h-8 w-8 text-primary" />, name: "Adobe XD", provider: "Coursera", year: "2020" },
 ]
 
 export function AboutSection() {

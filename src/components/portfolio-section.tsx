@@ -35,7 +35,7 @@ const projects: Project[] = [
     description: "A complete design of a mobile e-commerce application to improve user flow and increase conversions. Focused on a clean, modern interface and intuitive navigation.",
     tools: ["Figma", "Photoshop"],
     category: "Mobile Apps",
-    imageUrl: "public/IMG-20260720-WA0002.jpg",
+    imageUrl: "/IMG-20260720-WA0002.jpg",
     imageHint: "mobile app",
   },
   {
@@ -44,7 +44,7 @@ const projects: Project[] = [
     description: "Designed a complex data visualization dashboard for a B2B SaaS platform, enabling users to easily monitor and analyze key metrics.",
     tools: ["Adobe XD", "Illustrator"],
     category: "Dashboards",
-    imageUrl: "public/IMG-20260719-WA0003.jpg",
+    imageUrl: "/IMG-20260719-WA0003.jpg",
     imageHint: "dashboard analytics",
     liveUrl: "#",
   },
@@ -54,7 +54,7 @@ const projects: Project[] = [
     description: "A Weather App Created to Upcoming Weather Updates, Rain, Temperature, Wind And Other Things With a very interactive and responsive UI",
     tools: ["Webflow", "Figma"],
     category: "Web Design",
-    imageUrl: "public/IMG-20260719-WA0012.jpg",
+    imageUrl: "/IMG-20260719-WA0012.jpg",
     imageHint: "weather app",
   },
   {
@@ -63,7 +63,7 @@ const projects: Project[] = [
     description: "A web-based application designed to streamline the assessment process. Features dynamic question banking, customizable exam layouts, automated paper generation, and instant PDF exports for educational institutes.",
     tools: ["Figma", "Photoshop"],
     category: "Landing Pages",
-    imageUrl: "public/IMG-20260720-WA0003.jpg",
+    imageUrl: "/IMG-20260720-WA0003.jpg",
     imageHint: "paper Generating app",
   },
   {
@@ -72,7 +72,7 @@ const projects: Project[] = [
     description: "A user-friendly mobile/web application designed for online grocery shopping, featuring fresh produce categorization, real-time order tracking, localized inventory management, and seamless cart management.",
     tools: ["Figma", "Adobe XD"],
     category: "Mobile Apps",
-    imageUrl: "public/IMG-20260720-WA0004.jpg",
+    imageUrl: "/IMG-20260720-WA0004.jpg",
     imageHint: "veges app",
   },
   {
@@ -81,7 +81,7 @@ const projects: Project[] = [
     description: "A high-converting, fully responsive landing page designed to showcase modern home decor, interior services, and property listings. Features modern hero sections, interactive service showcases, and seamless lead-capture call-to-actions.",
     tools: ["Figma", "Illustrator"],
     category: "Web Design",
-    imageUrl: "public/IMG-20260720-WA0013.jpg",
+    imageUrl: "/IMG-20260720-WA0013.jpg",
     imageHint: "corporate portal",
   },
 ];

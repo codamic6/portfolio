@@ -6,9 +6,8 @@ import { motion } from "framer-motion";
 import { GraduationCap, CheckCircle } from "lucide-react";
 
 const education = [
-    { icon: <GraduationCap className="h-8 w-8 text-primary" />, degree: "M.Sc. Information Technology", school: "University of Education, Lahore", year: "2023" },
-    { icon: <GraduationCap className="h-8 w-8 text-primary" />, degree: "B.Sc. Artificial Intelligence", school: "Punjab University", year: "2024" },
-];
+    { icon: <GraduationCap className="h-8 w-8 text-primary" />, degree: "Information Technology", school: "University of Education, Lahore", year: "2023" },
+    ];
 
 const certifications = [
     { icon: <CheckCircle className="h-8 w-8 text-primary" />, name: "AI Developer", provider: "Udemy", year: "2023" },

@@ -89,6 +89,40 @@ const projects: Project[] = [
     imageHint: "corporate portal",
     liveUrl: "https://www.figma.com/design/1tn9PkAS1BTqXdoynOzZtF/Untitled?t=2p9st9hDX1tyAcEb-1",
   },
+
+    {
+    title: "Traveling App Design",
+    client: "Uni Travels",
+    description: "A modern, user-centric mobile app UI design created to enhance the travel booking experience. Features interactive destination guides, personalized itinerary planners, hotel reservation interfaces, and seamless booking flows.",
+      tools: ["Figma", "Illustrator"],
+    category: "Web Pages",
+    imageUrl: "/IMG-20260720-WA0016.jpg",
+    imageHint: "corporate portal",
+    liveUrl: "https://www.figma.com/design/1tn9PkAS1BTqXdoynOzZtF/Untitled?t=2p9st9hDX1tyAcEb-1",
+  },
+
+    {
+    title: "Cold Brew Ice Cream Store App",
+    client: "Cold Brew",
+    description: "A sleek mobile/web app designed for ordering specialty cold brews and handcrafted ice creams. Features interactive flavor menus, custom combo builders, real-time order tracking, and dynamic delivery scheduling.",
+      tools: ["Figma", "Illustrator"],
+    category: "Stores",
+    imageUrl: "/IMG-20260720-WA0017.jpg",
+    imageHint: "Ice cream",
+    liveUrl: "https://www.figma.com/design/iyerb8lhpoB2KnROestxAK/Cold-Brew?t=2p9st9hDX1tyAcEb-1",
+  },
+
+
+    {
+    title: "Coffee Store App Design",
+    client: "Aroma Cafes",
+    description: "A modern, visually rich mobile application design tailored for artisanal coffee shops. Features custom drink options (roast level, milk alternatives), an interactive order-ahead feature, real-time brewing status, and an integrated customer loyalty rewards system.",
+      tools: ["Figma", "Illustrator"],
+    category: "Stores",
+    imageUrl: "/IMG-20260720-WA0018.jpg",
+    imageHint: "coffee",
+    liveUrl: "https://www.figma.com/design/4AQA6zwp1fXcBQsnwRMtEg/Untitled?t=2p9st9hDX1tyAcEb-1",
+  },
 ];
 
 const categories = ["All", "Mobile Apps", "Web Design", "Landing Pages", "Dashboards"];

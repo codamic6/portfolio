@@ -37,6 +37,7 @@ const projects: Project[] = [
     category: "Mobile Apps",
     imageUrl: "/IMG-20260720-WA0002.jpg",
     imageHint: "mobile app",
+    liveUrl: "https://www.figma.com/design/EIot94R0fEcvFrtqzqX9NW/E-COMMERCE-APP?node-id=0-1&t=2p9st9hDX1tyAcEb-1",
   },
   {
     title: "SaaS Dashboard UI",
@@ -46,7 +47,7 @@ const projects: Project[] = [
     category: "Dashboards",
     imageUrl: "/IMG-20260719-WA0003.jpg",
     imageHint: "dashboard analytics",
-    liveUrl: "#",
+    liveUrl: "https://www.figma.com/design/T3kcrsKkEqXxSEkEa3LXU5/Untitled?t=2p9st9hDX1tyAcEb-1",
   },
   {
     title: "Daily Weather Forecasting App",
@@ -56,15 +57,17 @@ const projects: Project[] = [
     category: "Web Design",
     imageUrl: "/IMG-20260719-WA0012.jpg",
     imageHint: "weather app",
+    liveUrl: "https://www.figma.com/design/vbDXVMo5nI6FMkSF9oRChX/Weather-Casting?t=2p9st9hDX1tyAcEb-1",
   },
   {
     title: "Paper Generating App",
     client: "Innovate Inc.",
     description: "A web-based application designed to streamline the assessment process. Features dynamic question banking, customizable exam layouts, automated paper generation, and instant PDF exports for educational institutes.",
     tools: ["Figma", "Photoshop"],
-    category: "Landing Pages",
+    category: "App Design",
     imageUrl: "/IMG-20260720-WA0003.jpg",
     imageHint: "paper Generating app",
+    liveUrl: "https://www.figma.com/design/H5fTof3GpVp1zsy3qPZIro/Untitled?t=2p9st9hDX1tyAcEb-1",
   },
   {
     title: "Veges Store App",
@@ -74,15 +77,17 @@ const projects: Project[] = [
     category: "Mobile Apps",
     imageUrl: "/IMG-20260720-WA0004.jpg",
     imageHint: "veges app",
+    liveUrl: "https://www.figma.com/design/NTxmP4fQBs2qpp2HUfrd51/Greenery?t=2p9st9hDX1tyAcEb-1",
   },
   {
     title: "Homely – Modern Interior & Living Landing Page",
     client: "Global Enterprises",
     description: "A high-converting, fully responsive landing page designed to showcase modern home decor, interior services, and property listings. Features modern hero sections, interactive service showcases, and seamless lead-capture call-to-actions.",
     tools: ["Figma", "Illustrator"],
-    category: "Web Design",
+    category: "Landing Pages",
     imageUrl: "/IMG-20260720-WA0013.jpg",
     imageHint: "corporate portal",
+    liveUrl: "https://www.figma.com/design/1tn9PkAS1BTqXdoynOzZtF/Untitled?t=2p9st9hDX1tyAcEb-1",
   },
 ];
 

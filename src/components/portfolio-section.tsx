@@ -95,7 +95,7 @@ const projects: Project[] = [
     client: "Uni Travels",
     description: "A modern, user-centric mobile app UI design created to enhance the travel booking experience. Features interactive destination guides, personalized itinerary planners, hotel reservation interfaces, and seamless booking flows.",
       tools: ["Figma", "Illustrator"],
-    category: "Web Pages",
+    category: "Web Design",
     imageUrl: "/IMG-20260720-WA0016.jpg",
     imageHint: "corporate portal",
     liveUrl: "https://www.figma.com/design/1tn9PkAS1BTqXdoynOzZtF/Untitled?t=2p9st9hDX1tyAcEb-1",
@@ -103,7 +103,7 @@ const projects: Project[] = [
 
     {
     title: "Cold Brew Ice Cream Store App",
-    client: "Cold Brew",
+    client: "Mobile App",
     description: "A sleek mobile/web app designed for ordering specialty cold brews and handcrafted ice creams. Features interactive flavor menus, custom combo builders, real-time order tracking, and dynamic delivery scheduling.",
       tools: ["Figma", "Illustrator"],
     category: "Stores",
@@ -118,11 +118,48 @@ const projects: Project[] = [
     client: "Aroma Cafes",
     description: "A modern, visually rich mobile application design tailored for artisanal coffee shops. Features custom drink options (roast level, milk alternatives), an interactive order-ahead feature, real-time brewing status, and an integrated customer loyalty rewards system.",
       tools: ["Figma", "Illustrator"],
-    category: "Stores",
+    category: "Mobile App",
     imageUrl: "/IMG-20260720-WA0018.jpg",
     imageHint: "coffee",
     liveUrl: "https://www.figma.com/design/4AQA6zwp1fXcBQsnwRMtEg/Untitled?t=2p9st9hDX1tyAcEb-1",
   },
+
+
+  {
+    title: "Dashboard App Design",
+    client: "Aroma Cafes",
+    description: "A comprehensive data-driven dashboard interface designed for real-time monitoring and reporting. Features dynamic data visualization widgets, interactive charts, metric KPIs, user management, and customizable dark/light theme controls.",
+    tools: ["Figma", "Illustrator"],
+    category: "Dashboard",
+    imageUrl: "/IMG-20260720-WA0018.jpg",
+    imageHint: "dashboard",
+    liveUrl: "https://www.figma.com/design/E52z6aHY1re4eyTLF2gcxh/Untitled?t=2p9st9hDX1tyAcEb-1",
+  },
+
+
+  {
+    title: "E-Commerce Operations & Sales Dashboard",
+    client: "Excels",
+    description: "A centralized management portal designed for tracking daily online sales, live order processing, stock inventory levels, and customer lifetime value through interactive data tables and real-time visual metrics.",
+    tools: ["Figma", "Illustrator"],
+    category: "Dashboard",
+    imageUrl: "/IMG-20260720-WA0018.jpg",
+    imageHint: "coffee",
+    liveUrl: "https://www.figma.com/design/HmNTOGtWJ9sfHGdoa9W2wv/Untitled?t=2p9st9hDX1tyAcEb-1",
+  },
+
+  {
+    title: "Workforce & Project Tracking Dashboard",
+    client: "Hr Hub",
+    description: "An all-in-one workspace dashboard designed to manage team tasks, project timelines, and resource allocation. Features interactive Kanban boards, milestone tracking charts, team productivity metrics, and priority deadline alerts.",
+    tools: ["Figma", "Illustrator"],
+    category: "Dashboard",
+    imageUrl: "/IMG-20260720-WA0018.jpg",
+    imageHint: "coffee",
+    liveUrl: "https://www.figma.com/design/BLjcSVFIBMryBvmaLyACwG/Dashboard-4?t=2p9st9hDX1tyAcEb-1",
+  },
+
+
 ];
 
 const categories = ["All", "Mobile Apps", "Web Design", "Landing Pages", "Dashboards"];
